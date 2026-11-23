@@ -1,0 +1,1 @@
+{"description":"NEON VICE HEAT — a GTA 6-inspired open-world crime game built for the make.fun gta6-01 bounty","license":"MIT","main":"main.ts","name":"neon-vice-heat","scripts":{"start":"node main.ts"},"type":"module","version":"1.0.0"}

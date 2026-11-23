@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEON VICE HEAT — Open-World Crime Game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="game-wrap">
+  <canvas id="game" width="960" height="600"></canvas>
+
+  <div id="hud">
+    <div id="hud-left">
+      <div id="money">$0</div>
+      <div id="health-bar"><div id="health-fill"></div></div>
+      <div id="wanted"></div>
+    </div>
+    <div id="hud-right">
+      <div id="mission-title">NEON VICE HEAT</div>
+      <div id="mission-objective">Press ENTER to start</div>
+      <div id="speed">0 mph</div>
+    </div>
+  </div>
+
+  <canvas id="minimap" width="180" height="135"></canvas>
+
+  <div id="banner"></div>
+
+  <div id="start-screen">
+    <h1>NEON VICE HEAT</h1>
+    <p class="tagline">Vice Bay is yours for the taking.</p>
+    <p>Steal cars. Run missions. Outrun the law.</p>
+    <ul>
+      <li><b>WASD / Arrows</b> — drive or walk</li>
+      <li><b>E</b> — enter / exit a car</li>
+      <li><b>SPACE</b> — handbrake</li>
+      <li><b>M</b> — mute &nbsp; <b>P</b> — pause</li>
+    </ul>
+    <button id="start-btn">START THE HEAT</button>
+    <p class="hint">Five missions. Five stars of heat. One city that never sleeps.</p>
+  </div>
+
+  <div id="end-screen" class="hidden">
+    <h1>VICE BAY IS YOURS</h1>
+    <p id="end-stats"></p>
+    <p>Free roam continues — keep the heat alive.</p>
+    <button id="continue-btn">KEEP DRIVING</button>
+  </div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>

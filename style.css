@@ -1,0 +1,136 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #0b0614;
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  color: #f5e9ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#game-wrap {
+  position: relative;
+  width: 960px;
+  height: 600px;
+  box-shadow: 0 0 60px rgba(255, 0, 128, 0.35), 0 0 120px rgba(0, 229, 255, 0.18);
+  border: 2px solid #ff2d78;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#game { display: block; background: #141a2e; }
+
+#hud {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 14px;
+  pointer-events: none;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+#money {
+  font-size: 26px;
+  font-weight: bold;
+  color: #7dff9b;
+}
+
+#health-bar {
+  width: 160px;
+  height: 12px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #fff;
+  margin-top: 6px;
+}
+
+#health-fill {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #ff2d78, #ff7a3d);
+}
+
+#wanted { margin-top: 6px; font-size: 22px; letter-spacing: 3px; }
+
+#hud-right { text-align: right; }
+
+#mission-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffd23d;
+  text-transform: uppercase;
+}
+
+#mission-objective { font-size: 14px; color: #e8f6ff; margin-top: 2px; }
+#speed { font-size: 14px; color: #9be7ff; margin-top: 4px; }
+
+#minimap {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+  background: rgba(10, 10, 25, 0.8);
+}
+
+#banner {
+  position: absolute;
+  top: 38%;
+  left: 0; right: 0;
+  text-align: center;
+  font-size: 34px;
+  font-weight: bold;
+  color: #ffd23d;
+  text-shadow: 0 0 18px rgba(255, 45, 120, 0.9), 0 2px 4px #000;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+#start-screen, #end-screen {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(20, 4, 40, 0.96), rgba(60, 2, 50, 0.94));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  z-index: 10;
+}
+
+#start-screen h1, #end-screen h1 {
+  font-size: 52px;
+  letter-spacing: 4px;
+  background: linear-gradient(90deg, #ff2d78, #ffd23d, #00e5ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: none;
+}
+
+.tagline { font-size: 20px; color: #ffd23d; font-style: italic; }
+
+#start-screen ul { list-style: none; font-size: 15px; line-height: 1.9; }
+#start-screen ul b { color: #00e5ff; }
+
+#start-screen button, #end-screen button {
+  margin-top: 8px;
+  padding: 14px 34px;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #fff;
+  background: linear-gradient(90deg, #ff2d78, #ff7a3d);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#start-screen button:hover, #end-screen button:hover { filter: brightness(1.2); }
+
+.hint { font-size: 13px; color: #b9a8d6; }
+.hidden { display: none !important; }
